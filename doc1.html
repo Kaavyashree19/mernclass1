@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Scroll with Chatbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .movie-box {
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      background-color: #337388;
+      color: white;
+      overflow-y: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .movie-header {
+      position: sticky;
+      top: 0;
+      background-color: #225566;
+      padding: 10px;
+      text-align: center;
+      z-index: 1;
+      border-bottom: 2px solid #fff;
+    }
+
+    .movie-header img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .movie-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .movie-description {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Chatbox Styles */
+    .chatbox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 250px;
+      height: 300px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .chat-header {
+      background-color: #337388;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+      flex: 1;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .chat-input button {
+      background-color: #337388;
+      color: white;
+      border: none;
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+
+    .chat-input input:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Movie Sections -->
+  <div class="movie-box">
+    <div class="movie-header">
+      <img src="img1.jpg" alt="Inception">
+      <div class="movie-title">Inception</div>
+    </div>
+    <div class="movie-description">
+      A thief who steals corporate secrets through dream-sharing technology is given the task to plant an idea into a CEO's mind. The movie explores the layers of dream manipulation, time, and perception.
+    </div>
+  </div>
+
+  <div class="movie-box">
+    <div class="movie-header">
+      <img src="img2.jpg" alt="The Matrix">
+      <div class="movie-title">The Matrix</div>
+    </div>
+    <div class="movie-description">
+      A computer hacker learns about the true nature of reality and his role in the war against the machines. The Matrix blends sci-fi, philosophy, and action in a groundbreaking way.
+    </div>
+  </div>
+
+  <div class="movie-box">
+    <div class="movie-header">
+      <img src="img3.jpg alt="Interstellar">
+      <div class="movie-title">Interstellar</div>
+    </div>
+    <div class="movie-description">
+      A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. Themes include time dilation, love, and sacrifice across galaxies.
+    </div>
+  </div>
+
+  <div class="movie-box">
+    <div class="movie-header">
+      <img src="img4.jpg" alt="The Dark Knight">
+      <div class="movie-title">The Dark Knight</div>
+    </div>
+    <div class="movie-description">
+      Batman faces off against the Joker, a criminal mastermind who plunges Gotham into chaos. A gritty, psychological superhero film with iconic performances.
+    </div>
+  </div>
+
+  <div class="movie-box">
+    <div class="movie-header">
+      <img src="img5.jpg" alt="Avengers: Endgame">
+      <div class="movie-title">Avengers: Endgame</div>
+    </div>
+    <div class="movie-description">
+      The Avengers assemble one final time to reverse the damage caused by Thanos. A dramatic, emotional, and action-packed conclusion to the Infinity Saga.
+    </div>
+  </div>
+
+  <!-- Chatbox -->
+  <div class="chatbox">
+    <div class="chat-header">Chat Support</div>
+    <div class="chat-messages">
+      <p><strong>Bot:</strong>Ask questions?</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message...">
+      <button>Send</button>
+    </div>
+  </div>
+
+</body>
+</html>

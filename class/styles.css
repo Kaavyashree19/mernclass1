@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.5;
+  padding: 30px;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Center the name-title block */
+.name-title {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.name-title h1 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.name-title p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Align contact-info to right */
+.contact-info {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact-info span {
+  white-space: nowrap;
+}
+
+/* Section headings */
+section h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+  margin-top: 30px;
+}
+
+/* Education and Degree */
+.degree {
+  margin-bottom: 15px;
+}
+
+.degree h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.degree .institution,
+.degree .date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Lists styling */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
