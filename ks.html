@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Show Messages with Delay</title>
+</head>
+<body>
+
+  <h1 id="textOutput"></h1> <!-- Message will appear here -->
+
+  <script>
+    // Step 1: Get the h1 element
+    const output = document.getElementById("textOutput");
+
+    // Step 2: Show "Hi" after 2 seconds
+    setTimeout(() => {
+      output.innerText = "Hello";
+    }, 2000);
+
+    // Step 3: Show "Name" after 4 seconds
+    setTimeout(() => {
+      output.innerText = "I'm kaavya shree  r";
+    }, 4000);
+
+    // Step 4: Show "How are you" after 6 seconds
+    setTimeout(() => {
+      output.innerText = "How can i help you";
+    }, 6000);
+  </script>
+
+</body>
+</html>
