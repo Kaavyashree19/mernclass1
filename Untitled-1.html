@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Console Example</title>
+</head>
+<body>
+  <h1>HELLO WORLD !</h1>
+
+  <!-- Empty div to be used for DOM insertion -->
+  <div id="DOM"></div>
+
+  <script>
+    // Console examples
+    console.log("Hello world!");
+    console.warn("Warning!");
+    console.error("Error!");
+    console.table([
+      { name: "Alice", age: "36" },
+      { name: "Bob", age: "46" }
+    ]);
+
+    // Eval example
+    eval("let a = 5; console.log('Hello from eval!'); console.log(a);");
+
+    // JSON example
+    let x = 3.14;
+    console.log(x);
+
+    let obj = { name: "John" };
+    let str = JSON.stringify(obj);
+    console.log(str);
+    let back = JSON.parse(str);
+    console.log(back);
+
+    // Local & session storage
+    localStorage.setItem("username", "kaavya");
+    sessionStorage.setItem("age", "20");
+
+    // Promise example
+    function getData(success) {
+      return new Promise(function(resolve, reject) {
+        if (success) {
+          resolve("✅ Promise resolved: Success is true");
+        } else {
+          reject("❌ Promise rejected: Success is false");
+        }
+      });
+    }
+
+    function callPromise() {
+      let condition = true; // 🔁 Change to false to test rejection
+      getData(condition)
+        .then(function(result) {
+          console.log(result);
+        })
+        .catch(function(error) {
+          console.error(error);
+        });
+    }
+
+    callPromise();
+
+    // DOM manipulation
+    function outer() {
+      let divClass = document.getElementById("DOM");
+
+      let eleCreate = document.createElement("h1");
+      eleCreate.innerText = "Hello world!";
+      eleCreate.style.color = "blue";
+
+      // Add click event to change the text when clicked
+      eleCreate.addEventListener("click", function() {
+        eleCreate.innerText = "kaavya shree r";
+      });
+
+      divClass.appendChild(eleCreate);
+    }
+
+    // Call outer to insert element
+    outer();
+  </script>
+</body>
+</html>
