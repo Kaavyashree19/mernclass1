@@ -1,0 +1,27 @@
+use KEC
+switched to db KEC
+db createcollection("user")
+SyntaxError: Missing semicolon. (1:2)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db createcollection([32m"user"[39m)
+ [90m   |[39m   [31m[1m^[22m[39m[0m
+db.createcollection("user");
+TypeError: db.createcollection is not a function
+db.createCollection("user");
+{ ok: 1 }
+db.user.insertOne()
+MongoshInvalidInputError: [COMMON-10001] Missing required argument at position 0 (Collection.insertOne)
+db.user.insertOne({
+Name : "kavi",
+email: "kaavyashreer.23eie@kongu.edu",
+age : 21,
+department : "EIE",
+ })
+{
+  acknowledged: true,
+  insertedId: ObjectId('685a2673a7df029d8f951225')
+}
+db.user.find({Age:'21'})
+db.user.finf({Name:'kavi'})
+TypeError: db.user.finf is not a function
+db.user.find({Name:'kavi'})
